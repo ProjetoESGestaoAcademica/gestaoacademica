@@ -18,4 +18,4 @@ como inclusão de disciplinas, professores e alunos. Apenas o administrador pode
 
 **Repositório Principal:** [aqui](https://github.com/Projeto-ES-academia/academia-es)
 
-**Implantação no Heroku:** [aqui]
+**Implantação no Heroku:** [aqui](https://ancient-thicket-97661.herokuapp.com/)

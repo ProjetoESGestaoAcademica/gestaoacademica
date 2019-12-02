@@ -1,0 +1,35 @@
+<h2 align="center">Gestão Academica</h2>
+
+
+<br>
+<br>
+<br>
+
+<%= form_for(:session, url: 'access', :html => {:class => 'form-vertical'}) do |f| %>
+  <div align="center" class="control-group">
+    <label class="control-label">E-mail</label>
+    <div class="controls">
+      <%= f.email_field :email, class: 'span12' %>
+    </div>
+  </div>
+  <div align="center" class="control-group">
+    <label class="control-label">Senha</label>
+    <div class="input-group input-group-in">
+      <%= f.password_field :password, class: 'span12' %>
+    </div>
+  </div>
+  <div align="center" class="form-actions">
+    <%= f.submit "Entrar", class: "btn btn-danger" %>
+  </div>
+<% end %>
+
+<p align="center">
+  <font color="red"> Apenas quem esta logado pode modificar o sistema!</font>
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="center" >The time is now: <%= Time.now %></p>

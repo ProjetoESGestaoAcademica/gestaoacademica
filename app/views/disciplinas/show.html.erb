@@ -1,0 +1,17 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @disciplina.nome %>
+</p>
+
+<p>
+  <strong>Ementa:</strong>
+  <%= @disciplina.ementa %>
+</p>
+
+<p>
+  <strong>Horas:</strong>
+  <%= @disciplina.horas %>
+</p>
+
+<%= link_to 'Edit', edit_disciplina_path(@disciplina) %> |
+<%= link_to 'Back', disciplinas_path %>

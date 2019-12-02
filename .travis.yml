@@ -1,0 +1,15 @@
+language: ruby
+
+rvm:
+  - 2.3.3
+
+script:
+  - bundle exec rake db:create:all
+  - bundle exec rake dv:migrate RAILS_ENV=test
+  - ruby -Itest test/models/professor_test.rb
+  - ruby -Itest test/models/aluno_test.rb
+  - ruby -Itest test/models/disciplina_test.rb
+  - ruby -Itest test/models/user_test.rb
+
+services:
+  - postgresql

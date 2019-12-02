@@ -1,0 +1,17 @@
+<p>
+  <strong>Nome Completo:</strong>
+  <%= @professor.nome %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @professor.cpf %>
+</p>
+
+<p>
+  <strong>Formacao:</strong>
+  <%= @professor.formacao %>
+</p>
+
+<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Back', professors_path %>

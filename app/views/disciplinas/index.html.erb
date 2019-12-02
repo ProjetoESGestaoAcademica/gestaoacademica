@@ -1,0 +1,33 @@
+<p align="right"><%= link_to 'Logout', logout_url %></p>
+<h1>Disciplinas</h1>
+
+<%= link_to 'Cadastrar disciplina', new_disciplina_path %>
+
+<br>
+<br>
+<br>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Horas</th>
+    <th></th>
+  </tr>
+
+ <% @disciplinas.each do |disciplina| %>
+    <tr>
+      <td><%= disciplina.nome %></td>
+      <td><%= disciplina.horas %></td>
+      <td><%= link_to 'Mostrar', disciplina_path(disciplina) %></td>
+      <td><%= link_to 'Editar', edit_disciplina_path(disciplina) %></td>
+      <td><%= link_to 'Destruir', disciplina_path(disciplina),
+                      method: :delete,
+                      data: { confirm: 'Você esta seguro disto?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+<br>
+
+<%= link_to 'Back', root_url %>

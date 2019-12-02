@@ -1,0 +1,39 @@
+<h1>Editar - Aluno</h1>
+
+<%= form_with scope: :aluno, url: alunos_path, local: true do |form| %>
+  <% if @aluno.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@aluno.errors.count, "error") %> prohibited
+        this alunor from being saved:
+      </h2>
+      <ul>
+        <% @aluno.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :nome_completo %><br>
+    <%= form.text_field :nome %>
+  </p>
+
+  <p>
+    <%= form.label :cpf %><br>
+    <%= form.text_field :cpf %>
+  </p>
+
+  <p>
+    <%= form.label :idade %><br>
+    <%= form.text_field :idade %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', alunos_path %>
